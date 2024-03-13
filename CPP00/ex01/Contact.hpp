@@ -15,7 +15,6 @@ class Contact
 	public:
 		Contact();
 		~Contact();
-		Contact(string firstName, string lastName, string nickname, string phoneNumber, string darkestSecret);
 		string getFirstName() const;
 		string getLastName() const;
 		string getNickname() const;
