@@ -2,11 +2,11 @@
 #include <string>
 #include <cctype>
 
-using std::cout;
 using std::string;
-using std::toupper;
 
 void print_upper(const string &str) {
+	using std::cout;
+	using std::toupper;
 	for (size_t i = 0; i < str.length(); i++)
 		cout << static_cast<char>(toupper(str[i]));
 }
