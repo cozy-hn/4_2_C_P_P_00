@@ -1,4 +1,7 @@
-#include "main.hpp"
+#include "PhoneBook.hpp"
+#include "util.hpp"
+
+using std::cin;
 
 
 PhoneBook::PhoneBook() : _nbContacts(0), _start(0) {}

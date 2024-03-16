@@ -1,4 +1,10 @@
-#include "main.hpp"
+#include "util.hpp"
+#include "PhoneBook.hpp"
+
+using std::cout;
+using std::cin;
+using std::string;
+
 
 void println(const string &str) {
 	cout << str << "\n";
