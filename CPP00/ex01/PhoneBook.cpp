@@ -53,3 +53,38 @@ void PhoneBook::addContact()
 		_nbContacts++;
 	println("Contact added successfully!!");
 }
+
+void PhoneBook::searchContact()
+{
+	if (_nbContacts == 0)
+	{
+		println("No contacts available!!");
+		return;
+	}
+	println("     index|first name| last name|  nickname");
+	for (int i = 0; i < _nbContacts; i++)
+	{
+		Contact contact = _contacts[i];
+		println("         " + std::to_string(i) + "|" + contact.getFirstName() + "|" + contact.getLastName() + "|" + contact.getNickname());
+	}
+	string str;
+	print("Enter index: ");
+	if (!getline(cin, str) || str.empty())
+	{
+		clear_stdin();
+		println("Invalid index!!");
+		return;
+	}
+	int index = std::stoi(str);
+	if (index < 0 || index >= _nbContacts)
+	{
+		println("Invalid index!!");
+		return;
+	}
+	Contact contact = _contacts[index];
+	println("First name: " + contact.getFirstName());
+	println("Last name: " + contact.getLastName());
+	println("Nickname: " + contact.getNickname());
+	println("Phone number: " + contact.getPhoneNumber());
+	println("Darkest secret: " + contact.getDarkestSecret());
+}

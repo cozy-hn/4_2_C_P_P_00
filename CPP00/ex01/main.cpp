@@ -22,21 +22,20 @@ void clear_stdin() {
 }
 
 int main(void) {
-	string str;
-	string command;
+	string cmd;
 	PhoneBook phoneBook;		
 	while (true) {
 		println("1. ADD\n2. SEARCH\n3. EXIT\n");
-		if (!getline(cin, str))
+		if (!getline(cin, cmd))
 		{
 			clear_stdin();
 			continue;
 		}
-		if (str == "EXIT")
+		if (cmd == "EXIT")
 			break;
-		else if (str == "ADD")
+		else if (cmd == "ADD")
 			phoneBook.addContact();
-		else if (str == "SEARCH")
+		else if (cmd == "SEARCH")
 			println("SEARCH");
 		else
 			println("Invalid command!!\n");
