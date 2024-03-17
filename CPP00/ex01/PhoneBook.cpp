@@ -51,7 +51,7 @@ void PhoneBook::searchContact()
 	for (int i = 0; i < _nbContacts; i++)
 	{
 		Contact contact = _contacts[i];
-		print_bar_setw(std::to_string(i));
+		print_bar_setw(to_string(i));
 		print_bar_setw(contact.getFirstName());
 		print_bar_setw(contact.getLastName());
 		print_bar_setw(contact.getNickname());
@@ -71,7 +71,7 @@ void PhoneBook::searchContact()
 		println("Invalid index!!\n");
 		return;
 	}
-	int index = strtol(str.c_str(), nullptr, 10);
+	int index = strtol(str.c_str(), 0, 10);
 	if (index < 0 || index >= _nbContacts)
 	{
 		println("Invalid index!!\n");

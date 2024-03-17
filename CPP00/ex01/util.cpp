@@ -45,3 +45,9 @@ bool check_str(const string &str) {
 	}
 	return false;
 }
+
+string to_string(int value) {
+    stringstream ss;
+    ss << value;
+    return ss.str();
+}
