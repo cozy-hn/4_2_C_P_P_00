@@ -12,6 +12,7 @@ all : $(NAME)
 $(NAME): $(OBJ)
 	@$(CC) $(FLAG) $^ -o $@
 	@echo "\033[32;1m\n🎉 [SUCCESS] Huzzah! Everything has been compiled with dazzling success! 🎉\033[m"
+	@~/imgdogcat/imgdogcat -c
 
 %.o : %.cpp
 	@$(CC) $(FLAG) -I$(dir $<) -c $< -o $@
