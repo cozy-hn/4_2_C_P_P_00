@@ -23,4 +23,3 @@ class Harl
 };
 
 #endif
-
