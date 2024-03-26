@@ -12,6 +12,7 @@ all : $(NAME)
 $(NAME): $(OBJ)
 	@$(CC) $(FLAG) $^ -o $@
 	@echo "\033[32;1m\n🎉 [SUCCESS] Huzzah! Everything has been compiled with dazzling success! 🎉\033[m"
+	@~/imgdogcat/imgdogcat -c
 
 %.o : %.cpp
 	@$(CC) $(FLAG) -I$(dir $<) -c $< -o $@
@@ -24,6 +25,7 @@ clean :
 fclean : clean
 	@rm -f $(NAME)
 	@echo "\033[35;1m🌪️  [FCLEAN] Behold! All executables have been eradicated from existence!\033[m"
+	@rm text.replace
 
 re : fclean all
 	@echo "\033[1;92m🔄 [REMAKE] The cycle begins anew. Rebirth of the project is upon us!\033[m"
