@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	string s2 = argv[3];
 	string rtn;
 
-	ifstream file(filename);
+	ifstream file(filename.c_str());
 	if (!file.is_open())
 	{
 		cout << "Error: could not open file" << endl;
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 		content = content.substr(pos + s1.length());
 	}
 	rtn += content;
-	ofstream newfile(filename + ".replace");
+	ofstream newfile((filename + ".replace").c_str());
 	newfile << rtn;
 	newfile.close();
 	cout << "File " << filename << " has been replaced and saved as " << filename + ".replace" << endl;

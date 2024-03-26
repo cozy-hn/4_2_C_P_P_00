@@ -25,7 +25,6 @@ clean :
 fclean : clean
 	@rm -f $(NAME)
 	@echo "\033[35;1m🌪️  [FCLEAN] Behold! All executables have been eradicated from existence!\033[m"
-	@rm text.replace
 
 re : fclean all
 	@echo "\033[1;92m🔄 [REMAKE] The cycle begins anew. Rebirth of the project is upon us!\033[m"
