@@ -44,6 +44,11 @@ int main(int argc, char **argv)
 	}
 	rtn += content;
 	ofstream newfile((filename + ".replace").c_str());
+	if (!newfile.is_open())
+	{
+		cout << "Error: could not create file" << endl;
+		return 1;
+	}
 	newfile << rtn;
 	newfile.close();
 	cout << "File " << filename << " has been replaced and saved as " << filename + ".replace" << endl;
