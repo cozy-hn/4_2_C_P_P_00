@@ -2,16 +2,24 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-class fixed
+# include <iostream>
+
+using std::cout;
+
+class Fixed
 {
-public:
-	fixed();
-	fixed(const fixed& obj);
-	~fixed();
-	fixed&	operator=(const fixed& obj);
+	public:
+		Fixed();
+		Fixed(const Fixed& obj);
+		~Fixed();
+		Fixed&	operator=(const Fixed& obj);
 
-private:
+		int		getRawBits(void) const;
+		void	setRawBits(int const raw);
 
+	private:
+		static const int kbits_ = 8;
+		int value_;
 };
 
 #endif

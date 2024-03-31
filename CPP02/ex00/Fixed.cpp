@@ -1,17 +1,37 @@
-#include "fixed.hpp"
+#include "Fixed.hpp"
 
-fixed::fixed()
+Fixed::Fixed(): value_(0)
 {
+	cout << "Default constructor called\n";
 }
 
-fixed::fixed(const fixed& obj)
+Fixed::Fixed(const Fixed& obj)
 {
+	cout << "Copy constructor called\n";
+	*this = obj;
 }
 
-fixed::~fixed()
+Fixed::~Fixed()
 {
+	cout << "Destructor called\n";
 }
 
-fixed&	fixed::operator=(const fixed& obj)
+Fixed&	Fixed::operator=(const Fixed& obj)
 {
+	cout << "Assignation operator called\n";
+	if (this != &obj)
+		value_ = obj.getRawBits();
+	return *this;
+}
+
+int		Fixed::getRawBits(void) const
+{
+	cout << "getRawBits member function called\n";
+	return value_;
+}
+
+void	Fixed::setRawBits(int const raw)
+{
+	cout << "setRawBits member function called\n";
+	value_ = raw;
 }

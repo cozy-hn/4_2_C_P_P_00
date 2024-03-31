@@ -2,10 +2,10 @@ CC          := c++
 FLAG        := -Wall -Wextra -Werror -std=c++98
 
 DIR         := ./
-BASE        := 
+BASE        := main	Fixed
 SRC         := $(addprefix $(DIR), $(addsuffix .cpp, $(BASE)))
 OBJ         := $(addprefix $(DIR), $(addsuffix .o, $(BASE)))
-NAME        := 
+NAME        := Fix
 
 all : $(NAME)
 
