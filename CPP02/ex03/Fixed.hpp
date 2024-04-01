@@ -6,7 +6,6 @@
 # include <cmath>
 
 using std::cout;
-using std::roundf;
 using std::ostream;
 
 class Fixed
