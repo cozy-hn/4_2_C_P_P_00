@@ -2,10 +2,10 @@ CC          := c++
 FLAG        := -Wall -Wextra -Werror -std=c++98
 
 DIR         := ./
-BASE        := main
+BASE        := main	ClapTrap ScavTrap FragTrap
 SRC         := $(addprefix $(DIR), $(addsuffix .cpp, $(BASE)))
 OBJ         := $(addprefix $(DIR), $(addsuffix .o, $(BASE)))
-NAME        := 
+NAME        := ClapTrap
 
 all : $(NAME)
 
