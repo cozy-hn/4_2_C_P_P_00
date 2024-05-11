@@ -18,7 +18,7 @@ class ClapTrap
         virtual void attack(const string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-		string getName() const;
+		virtual string getName() const;
 
     protected:
         string _name;

@@ -24,6 +24,7 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
         _hitPoints = obj._hitPoints;
         _energyPoints = obj._energyPoints;
         _attackDamage = obj._attackDamage;
+        _maxHitPoints = obj._maxHitPoints;
     }
     return *this;
 }
@@ -69,11 +70,12 @@ void ClapTrap::beRepaired(unsigned int amount)
         if (amount > _maxHitPoints)
             amount = _maxHitPoints;
         if (amount + _hitPoints > _maxHitPoints)
+        {
+            amount = _maxHitPoints - _hitPoints;
             _hitPoints = _maxHitPoints;
+        }
         else
             _hitPoints += amount;
-        if (_hitPoints > _maxHitPoints)
-            _hitPoints = _maxHitPoints;
         _energyPoints--;
         cout << _name << " is repaired for " << amount << " points!" << "\n";
     }

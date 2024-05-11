@@ -14,14 +14,11 @@ class DiamondTrap : public ScavTrap, public FragTrap
         DiamondTrap(string name);
         void whoAmI();
         void attack(const string& target);
+        string getName() const;
+        void printall();
 
     private:
         string _name;
-        unsigned int _hitpoints;
-        unsigned int _energyPoints;
-        unsigned int _attackDamage;
-        unsigned int _maxHitpoints;
-
 };
 
 #endif

@@ -12,7 +12,6 @@ class FragTrap : public ClapTrap
         FragTrap&	operator=(const FragTrap& obj);
         FragTrap(string name);
         void highFivesGuys();
-        void attack(const string& target);
 };
 
 #endif

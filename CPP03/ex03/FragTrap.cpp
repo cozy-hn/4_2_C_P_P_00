@@ -32,14 +32,3 @@ void FragTrap::highFivesGuys()
 {
 	cout << "FragTrap " << _name << " requests a high five!" << "\n";
 }
-
-void FragTrap::attack(const string& target)
-{
-	if (_energyPoints > 0)
-	{
-		_energyPoints--;
-		cout << "FragTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << "\n";
-	}
-	else
-		cout << "FragTrap " << _name << " has no energy points left!" << "\n";
-}

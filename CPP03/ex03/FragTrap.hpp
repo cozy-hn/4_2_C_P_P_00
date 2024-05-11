@@ -8,11 +8,10 @@ class FragTrap : virtual public ClapTrap
     public:
         FragTrap();
         FragTrap(const FragTrap& obj);
-        ~FragTrap();
+        virtual ~FragTrap();
         FragTrap&	operator=(const FragTrap& obj);
         FragTrap(string name);
         void highFivesGuys();
-        void attack(const string& target);
 };
 
 #endif
