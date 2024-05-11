@@ -5,7 +5,7 @@ DIR         := ./
 BASE        := main	ClapTrap ScavTrap
 SRC         := $(addprefix $(DIR), $(addsuffix .cpp, $(BASE)))
 OBJ         := $(addprefix $(DIR), $(addsuffix .o, $(BASE)))
-NAME        := ClapTrap
+NAME        := ScavTrap
 
 all : $(NAME)
 
