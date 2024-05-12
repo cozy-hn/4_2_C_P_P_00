@@ -2,7 +2,7 @@ CC          := c++
 FLAG        := -Wall -Wextra -Werror -std=c++98
 
 DIR         := ./
-BASE        := main Animal Dog Cat
+BASE        := main Animal Dog Cat WrongAnimal WrongCat
 SRC         := $(addprefix $(DIR), $(addsuffix .cpp, $(BASE)))
 OBJ         := $(addprefix $(DIR), $(addsuffix .o, $(BASE)))
 NAME        := Polymorphism
