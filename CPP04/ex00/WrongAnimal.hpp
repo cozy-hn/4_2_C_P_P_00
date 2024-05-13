@@ -12,7 +12,7 @@ class WrongAnimal
 	public:
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal& obj);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal&	operator=(const WrongAnimal& obj);
 		void makeSound() const;
 		string getType() const;
