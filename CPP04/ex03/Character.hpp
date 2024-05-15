@@ -4,6 +4,7 @@
 
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include "Floor.hpp"
 
 class Character : public ICharacter
 {
@@ -18,11 +19,12 @@ class Character : public ICharacter
 		virtual void equip(AMateria* m);
 		virtual void unequip(int idx);
 		virtual void use(int idx, ICharacter& target);
+		void	setFloor(Floor* floor);
 	
 	private:
 		string	_name;
 		AMateria*	_inventory[4];
-
+		Floor*		_floor;
 };
 
 #endif

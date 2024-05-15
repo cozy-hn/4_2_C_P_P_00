@@ -3,7 +3,7 @@
 MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
-		_inventory[i] = nullptr;
+		_inventory[i] = 0;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& obj)
@@ -13,7 +13,7 @@ MateriaSource::MateriaSource(const MateriaSource& obj)
 		if (obj._inventory[i])
 			_inventory[i] = obj._inventory[i]->clone();
 		else
-			_inventory[i] = nullptr;
+			_inventory[i] = 0;
 	}
 }
 
@@ -35,7 +35,7 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& obj)
 			if (obj._inventory[i])
 				_inventory[i] = obj._inventory[i]->clone();
 			else
-				_inventory[i] = nullptr;
+				_inventory[i] = 0;
 		}
 	}
 	return *this;
@@ -43,13 +43,20 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& obj)
 
 void	MateriaSource::learnMateria(AMateria* m)
 {
+	bool learned = false;
 	for (int i = 0; i < 4; i++)
 	{
 		if (!_inventory[i])
 		{
 			_inventory[i] = m;
+			learned = true;
 			break;
 		}
+	}
+	if (!learned)
+	{
+		cout << "Inventory is full" << "\n";
+		delete m;
 	}
 }
 
@@ -60,5 +67,5 @@ AMateria*	MateriaSource::createMateria(string const & type)
 		if (_inventory[i] && _inventory[i]->getType() == type)
 			return _inventory[i]->clone();
 	}
-	return nullptr;
+	return 0;
 }
