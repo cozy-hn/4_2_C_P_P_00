@@ -6,10 +6,9 @@ Cat::Cat()
 	cout << "Cat constructor called" << "\n";
 }
 
-Cat::Cat(const Cat& obj)
+Cat::Cat(const Cat& obj) : Animal(obj)
 {
 	cout << "Cat copy constructor called" << "\n";
-	*this = obj;
 }
 
 Cat::~Cat()

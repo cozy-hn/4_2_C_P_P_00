@@ -6,10 +6,9 @@ Dog::Dog()
 	cout << "Dog constructor called" << "\n";
 }
 
-Dog::Dog(const Dog& obj)
+Dog::Dog(const Dog& obj) : Animal(obj)
 {
 	cout << "Dog copy constructor called" << "\n";
-	*this = obj;
 }
 
 Dog::~Dog()
