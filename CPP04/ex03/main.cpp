@@ -4,14 +4,14 @@
 #include "Cure.hpp"
 #include "Floor.hpp"
 
-void showLeaks()
-{
-	system("leaks materia");
-}
+// void showLeaks()
+// {
+// 	system("leaks materia");
+// }
 	
 int main()
 {
-	atexit(showLeaks);
+	// atexit(showLeaks);
 	{
 		cout << "Default test" << "\n";
 		IMateriaSource* src = new MateriaSource();
