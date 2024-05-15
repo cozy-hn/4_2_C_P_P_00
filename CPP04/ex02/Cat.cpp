@@ -7,10 +7,9 @@
 		_brain = new Brain();
 	}
 
-	Cat::Cat(const Cat& obj)
+	Cat::Cat(const Cat& obj) : AAnimal(obj)
 	{
 		cout << "Cat copy constructor called" << "\n";
-		type = obj.type;
 		_brain = new Brain(*obj._brain);
 	}
 
