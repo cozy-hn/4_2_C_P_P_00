@@ -73,8 +73,14 @@ void Character::equip(AMateria* m)
 	}
 	if (!equipped)
 	{
+		if (!_floor)
+		{
+			cout << "Inventory is full! Cannot drop materia on the floor! => Delete materia" << "\n";
+			delete m;
+			return;
+		}
 		_floor->dropMateria(m);
-		cout << "Inventory is full! Drop item on the floor" << "\n";
+		cout << "Inventory is full! Drop materia on the floor" << "\n";
 	}
 }
 
