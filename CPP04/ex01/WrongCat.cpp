@@ -6,10 +6,9 @@ WrongCat::WrongCat()
 	cout << "WrongCat constructor called" << "\n";
 }
 
-WrongCat::WrongCat(const WrongCat& obj)
+WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(obj)
 {
 	cout << "WrongCat copy constructor called" << "\n";
-	*this = obj;
 }
 
 WrongCat::~WrongCat()

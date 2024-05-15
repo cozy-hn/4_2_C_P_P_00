@@ -7,10 +7,9 @@ Dog::Dog()
 	_brain = new Brain();
 }
 
-Dog::Dog(const Dog& obj)
+Dog::Dog(const Dog& obj) : Animal(obj)
 {
 	cout << "Dog copy constructor called" << "\n";
-	type = obj.type;
 	_brain = new Brain(*obj._brain);
 }
 
