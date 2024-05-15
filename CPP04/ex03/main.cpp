@@ -4,14 +4,14 @@
 #include "Cure.hpp"
 #include "Floor.hpp"
 
-// void showLeaks()
-// {
-// 	system("leaks materia");
-// }
+void showLeaks()
+{
+	system("leaks materia");
+}
 	
 int main()
 {
-	// atexit(showLeaks);
+	atexit(showLeaks);
 	{
 		cout << "Default test" << "\n";
 		IMateriaSource* src = new MateriaSource();
@@ -60,11 +60,13 @@ int main()
 		me->equip(tmp);
 		tmp = src->createMateria("ice");
 		me->equip(tmp);
+		me->setFloor(floor);
 		tmp = src->createMateria("cure");
 		me->equip(tmp);
 		tmp = src->createMateria("iceee");
 		me->equip(tmp);
 
+		me->setFloor(0);
 		me->unequip(0);
 		me->unequip(1);
 		me->setFloor(floor);
