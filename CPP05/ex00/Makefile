@@ -5,7 +5,7 @@ DIR         := ./
 BASE        := main Bureaucrat
 SRC         := $(addprefix $(DIR), $(addsuffix .cpp, $(BASE)))
 OBJ         := $(addprefix $(DIR), $(addsuffix .o, $(BASE)))
-NAME        := Polymorphism
+NAME        := Bureaucrat
 
 all : $(NAME)
 
