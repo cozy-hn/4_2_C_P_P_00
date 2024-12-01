@@ -9,9 +9,9 @@
 class Span {
     private:
         unsigned int _n;
+        std::multiset<int> _set;
 
     public:
-        std::multiset<int> _set;
         Span();
         Span(unsigned int n);
         Span(const Span &obj);
