@@ -35,7 +35,9 @@ unsigned int Span::shortestSpan() const {
         throw std::out_of_range("Span is too short");
     }
     std::multiset<int>::iterator it = _set.begin();
-    unsigned int shortest = *std::next(it) - *it;
+    std::multiset<int>::iterator next_it = it;
+    ++next_it;
+    unsigned int shortest = *next_it - *it;
     for (std::multiset<int>::iterator it = _set.begin(); it != _set.end(); ++it) {
         if (it != _set.begin()) {
             std::multiset<int>::iterator prev_it = it;
