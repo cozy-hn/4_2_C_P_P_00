@@ -2,10 +2,10 @@
 #include <ctime>
 #include <iostream>
 
-void leaks_check() {
-	std::cout << "leaks check\n";
-	system("leaks --list a.out");
-}
+// void leaks_check() {
+// 	std::cout << "leaks check\n";
+// 	system("leaks --list a.out");
+// }
 
 #define ARRAY_SIZE 750
 int main() {
