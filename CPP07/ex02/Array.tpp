@@ -1,13 +1,13 @@
 #include "Array.hpp"
 
 template <typename T>
-Array<T>::Array() : _array(nullptr), _size(0) {}
+Array<T>::Array() : _array(0), _size(0) {}
 
 template <typename T>
-Array<T>::Array(unsigned int n) : _array(n > 0 ? new T[n] : nullptr), _size(n) {}
+Array<T>::Array(unsigned int n) : _array(n > 0 ? new T[n] : 0), _size(n) {}
 
 template <typename T>
-Array<T>::Array(const Array& obj) : _array(obj._size > 0 ? new T[obj._size] : nullptr), _size(obj._size) {
+Array<T>::Array(const Array& obj) : _array(obj._size > 0 ? new T[obj._size] : 0), _size(obj._size) {
     for (unsigned int i = 0; i < _size; ++i) {
         _array[i] = obj._array[i];
     }
@@ -17,7 +17,7 @@ template <typename T>
 Array<T>& Array<T>::operator=(const Array& obj) {
     if (this != &obj) {
         delete[] _array;
-        _array = obj._size > 0 ? new T[obj._size] : nullptr;
+        _array = obj._size > 0 ? new T[obj._size] : 0;
         _size = obj._size;
         for (unsigned int i = 0; i < _size; ++i) {
             _array[i] = obj._array[i];
