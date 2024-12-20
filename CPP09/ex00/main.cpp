@@ -18,8 +18,9 @@ int main(int argc, char** argv) {
     stream.clear();
     if (!(stream >> left && left == "date" && stream >> delimiter &&
             delimiter == "|" && stream >> right && right == "value" &&
-            !(stream >> right)))
+            !(stream >> right))) {
         return pintError("Error: could not open file.");
+    }
 
 	BitcoinExchange& exchange = BitcoinExchange::getInstance();
 	exchange.initDatabase("data.csv");
